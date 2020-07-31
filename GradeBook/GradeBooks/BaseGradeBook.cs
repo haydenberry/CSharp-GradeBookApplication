@@ -14,13 +14,13 @@ namespace GradeBook.GradeBooks
         public string Name { get; set; }
         public List<Student> Students { get; set; }
         public GradeBookType Type { get; set; }
-        public bool isWeighted { get; set; }
+        public bool IsWeighted { get; set; }
 
         public BaseGradeBook(string name, bool isWeighted)
         {
             Name = name;
             Students = new List<Student>();
-            this.isWeighted = isWeighted;
+            this.IsWeighted = isWeighted;
         }
 
         public void AddStudent(Student student)
@@ -129,7 +129,7 @@ namespace GradeBook.GradeBooks
                     break;
             }
 
-            if(isWeighted == true && (studentType == StudentType.Honors || studentType == StudentType.DualEnrolled)) gpa++;
+            if(IsWeighted == true && (studentType == StudentType.Honors || studentType == StudentType.DualEnrolled)) gpa++;
 
             return gpa;
         }
